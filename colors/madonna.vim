@@ -26,6 +26,7 @@ let s:bg = "#fff"
 let s:non_text    = { "gui": "#e5e5e5"}
 
 let s:comment_fg = { "gui": "#a0a1a7"}
+let s:line_number = { "gui": "#d7dae0"}
 
 let s:cursor_line = { "gui": "#f0f0f0" }
 let s:color_col   = { "gui": "#f0f0f0" }
@@ -78,10 +79,10 @@ call s:h("Define", s:purple, "", "")
 call s:h("Macro", s:purple, "", "")
 call s:h("PreCondit", s:yellow, "", "")
 
-call s:h("Typedef", s:orange, "", "")
-call s:h("Type", s:fg, "", "italic")
-call s:h("StorageClass", s:yellow, "", "")
-call s:h("Structure", s:yellow, "", "")
+call s:h("Typedef", s:dark_orange, "", "")
+call s:h("Type", s:fg, s:light_gray, "italic")
+call s:h("StorageClass", s:fg, "", "")
+call s:h("Structure", s:fg, "", "")
 
 call s:h("Special", s:blue, "", "")
 call s:h("SpecialChar", s:fg, "", "")
@@ -93,3 +94,18 @@ call s:h("Underlined", s:fg, "", "")
 call s:h("Ignore", s:fg, "", "")
 call s:h("Error", s:red, "", "")
 call s:h("Todo", s:purple, "", "")
+
+call s:h("@field", s:teal, "", "")
+call s:h("@functions.builtin", s:blue, "", "italic")
+
+" editor
+set cursorline
+set cursorlineopt=number
+call s:h("LineNr", s:line_number, "", "")
+call s:h("CursorLineNr",  s:comment_fg, s:bg, "")
+
+" popup menu
+call s:h("Pmenu", s:bg, s:light_gray, "")
+call s:h("PmenuSel", s:teal, s:bg, "")
+call s:h("PmenuThumb", s:fg, s:bg, "")
+
