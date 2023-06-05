@@ -106,6 +106,6 @@ call s:h("CursorLineNr",  s:comment_fg, s:bg, "")
 
 " popup menu
 call s:h("Pmenu", s:bg, s:light_gray, "")
-call s:h("PmenuSel", s:teal, s:bg, "")
+call s:h("PmenuSel", s:teal, s:line_number, "")
 call s:h("PmenuThumb", s:fg, s:bg, "")
 
